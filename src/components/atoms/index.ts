@@ -1,4 +1,3 @@
-export {default as Card} from './Card';
 export {default as BasicButton} from './BasicButton';
 export {default as BasicContainer} from './BasicContainer';
 export {default as BasicHeader} from './BasicHeader';
