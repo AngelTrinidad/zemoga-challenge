@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 
-import PostAuthor from './PostAuthor';
-import PostComments from './PostComments';
+import PostAuthor from './components/PostAuthor';
+import PostComments from './components/PostComments';
 
 import {AsyncContent, DetailTemplate, Typography} from '~components';
 import {capitalizeFirstLetter} from '~helpers/string';
