@@ -2,7 +2,6 @@
 import {NativeModules as RNNativeModules} from 'react-native';
 
 import {configure} from '@testing-library/react-native';
-import {Settings} from 'luxon';
 
 // Import Jest Native matchers
 import '@testing-library/jest-native/extend-expect';
@@ -30,9 +29,6 @@ RNNativeModules.PlatformConstants = RNNativeModules.PlatformConstants || {
   forceTouchAvailable: false,
 };
 
-// Luxon
-Settings.now = () => new Date(2023, 1, 11).valueOf();
-
 // Safe area context
 jest.mock('react-native-safe-area-context', () => {
   const inset = {top: 0, right: 0, bottom: 0, left: 0};
@@ -44,3 +40,16 @@ jest.mock('react-native-safe-area-context', () => {
     useSafeAreaFrame: jest.fn(() => ({x: 0, y: 0, width: 390, height: 844})),
   };
 });
+
+// Storage
+jest.mock('@react-native-async-storage/async-storage', () =>
+  require('@react-native-async-storage/async-storage/jest/async-storage-mock'),
+);
+
+// NetInfo
+jest.mock('@react-native-community/netinfo', () => ({
+  ...require('@react-native-community/netinfo/jest/netinfo-mock.js'),
+  addEventListener: jest
+    .fn()
+    .mockImplementationOnce(cb => cb({isConnected: true})),
+}));

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<BasicButton /> has same snapshot 1`] = `
+exports[`<BasicButton /> should has same snapshot 1`] = `
 <View
   accessibilityState={
     {
@@ -22,9 +22,7 @@ exports[`<BasicButton /> has same snapshot 1`] = `
   accessible={true}
   collapsable={false}
   focusable={true}
-  onBlur={[Function]}
   onClick={[Function]}
-  onFocus={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -32,19 +30,15 @@ exports[`<BasicButton /> has same snapshot 1`] = `
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
   style={
-    [
-      {
-        "alignItems": "center",
-        "borderRadius": 10,
-        "height": 57.14285714285714,
-        "justifyContent": "center",
-        "width": "100%",
-      },
-      {
-        "backgroundColor": "#334FFA",
-      },
-      undefined,
-    ]
+    {
+      "alignItems": "center",
+      "backgroundColor": "#567189",
+      "borderRadius": 12,
+      "justifyContent": "center",
+      "minHeight": 57.14285714285714,
+      "opacity": 1,
+      "width": "100%",
+    }
   }
 >
   <Text>

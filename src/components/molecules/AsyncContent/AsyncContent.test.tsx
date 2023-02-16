@@ -1,9 +1,9 @@
 import React from 'react';
 import {Text} from 'react-native';
 
-import {render} from '@testing-library/react-native';
-
 import AsyncContent from '.';
+
+import {render} from '~helpers/testing';
 
 describe('<AsyncContent />', () => {
   let component: any;
@@ -20,7 +20,7 @@ describe('<AsyncContent />', () => {
     );
   });
 
-  it('should renders correctly', () => {
+  it('should render correctly', () => {
     expect(component).toBeDefined();
   });
 

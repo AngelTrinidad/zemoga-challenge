@@ -1,2 +1,2 @@
-export * from './useGetPosts';
+export * from './useGetPost';
 export * from './useGetPostDetail';

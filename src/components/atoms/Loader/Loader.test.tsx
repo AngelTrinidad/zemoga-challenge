@@ -1,19 +1,14 @@
 import React from 'react';
-import {Text} from 'react-native';
 
-import BasicContainer from '.';
+import Loader from '.';
 
 import {render} from '~helpers/testing';
 
-describe('<BasicContainer />', () => {
+describe('<Loader />', () => {
   let component: any;
 
   beforeEach(() => {
-    component = render(
-      <BasicContainer>
-        <Text>Hello</Text>
-      </BasicContainer>,
-    );
+    component = render(<Loader />);
   });
 
   it('should render correctly', () => {

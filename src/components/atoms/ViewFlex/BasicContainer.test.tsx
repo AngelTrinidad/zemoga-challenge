@@ -1,18 +1,18 @@
 import React from 'react';
 import {Text} from 'react-native';
 
-import BasicContainer from '.';
+import ViewFlex from '.';
 
 import {render} from '~helpers/testing';
 
-describe('<BasicContainer />', () => {
+describe('<ViewFlex />', () => {
   let component: any;
 
   beforeEach(() => {
     component = render(
-      <BasicContainer>
+      <ViewFlex>
         <Text>Hello</Text>
-      </BasicContainer>,
+      </ViewFlex>,
     );
   });
 

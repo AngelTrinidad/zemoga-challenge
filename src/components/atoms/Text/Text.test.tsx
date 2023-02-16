@@ -1,10 +1,9 @@
 import React from 'react';
 
-import {render} from '@testing-library/react-native';
-
 import Text from '.';
 
 import {DEFAULT_FONT} from '~constants/styles';
+import {render} from '~helpers/testing';
 
 describe('<BasicButton />', () => {
   let component: any;
@@ -13,7 +12,7 @@ describe('<BasicButton />', () => {
     component = render(<Text>Hello</Text>);
   });
 
-  it('should renders correctly', () => {
+  it('should render correctly', () => {
     expect(component).toBeDefined();
   });
 

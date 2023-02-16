@@ -1,8 +1,8 @@
 import React from 'react';
 
-import {render} from '@testing-library/react-native';
-
 import Typography from '.';
+
+import {render} from '~helpers/testing';
 
 describe('<Typography />', () => {
   let component: any;

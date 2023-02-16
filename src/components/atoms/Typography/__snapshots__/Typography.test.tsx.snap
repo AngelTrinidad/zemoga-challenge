@@ -5,9 +5,9 @@ exports[`<Typography /> should has the same snapshot 1`] = `
   style={
     {
       "color": "black",
-      "fontFamily": "Metropolis Bold",
+      "fontFamily": "System",
       "fontSize": 17.2,
-      "fontWeight": "800",
+      "textAlign": undefined,
     }
   }
 >

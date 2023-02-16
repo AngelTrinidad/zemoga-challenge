@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DetailTemplate /> should has same snapshot 1`] = `
+<View
+  style={
+    [
+      {
+        "flex": 1,
+      },
+      undefined,
+      {
+        "backgroundColor": "#F8F8F8",
+        "paddingBottom": 0,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      [
+        {
+          "paddingHorizontal": 22.857142857142858,
+          "paddingVertical": 27.42857142857143,
+        },
+        {
+          "backgroundColor": "#CFB997",
+        },
+        {
+          "paddingTop": 27.42857142857143,
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        {
+          "color": "black",
+          "fontFamily": "System",
+          "fontSize": 29.485714285714288,
+          "fontWeight": "800",
+          "textAlign": undefined,
+        }
+      }
+    >
+      Hello
+    </Text>
+  </View>
+  <RCTScrollView
+    contentContainerStyle={
+      [
+        {
+          "backgroundColor": "#F8F8F8",
+        },
+        {
+          "padding": 22.857142857142858,
+          "paddingBottom": 27.42857142857143,
+        },
+      ]
+    }
+    showsVerticalScrollIndicator={false}
+  >
+    <View>
+      <Text>
+        Hello
+      </Text>
+    </View>
+  </RCTScrollView>
+</View>
+`;

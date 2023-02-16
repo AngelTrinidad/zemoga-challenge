@@ -1,19 +1,14 @@
 import React from 'react';
-import {Text} from 'react-native';
 
-import BasicContainer from '.';
+import HeaderTitle from '.';
 
 import {render} from '~helpers/testing';
 
-describe('<BasicContainer />', () => {
+describe('<HeaderTitle />', () => {
   let component: any;
 
   beforeEach(() => {
-    component = render(
-      <BasicContainer>
-        <Text>Hello</Text>
-      </BasicContainer>,
-    );
+    component = render(<HeaderTitle title="Hello" />);
   });
 
   it('should render correctly', () => {

@@ -15,7 +15,7 @@ export const useNetInfo = (): UseNetInfo => {
     });
 
     return () => {
-      unsubscribe();
+      unsubscribe?.();
     };
   }, []);
 

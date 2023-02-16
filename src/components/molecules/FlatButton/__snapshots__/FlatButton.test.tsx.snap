@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Button /> should has same snapshot 1`] = `
+exports[`<FlatButton /> should has same snapshot 1`] = `
 <View
   accessibilityState={
     {
@@ -31,27 +31,24 @@ exports[`<Button /> should has same snapshot 1`] = `
   onStartShouldSetResponder={[Function]}
   style={
     {
-      "alignItems": "center",
-      "backgroundColor": "#567189",
-      "borderRadius": 12,
-      "justifyContent": "center",
-      "minHeight": 57.14285714285714,
       "opacity": 1,
-      "width": "100%",
     }
   }
 >
   <Text
     style={
       {
-        "color": "white",
+        "color": "#567189",
         "fontFamily": "System",
-        "fontSize": 19.65714285714286,
+        "fontSize": 24.57142857142857,
+        "marginVertical": 9.142857142857142,
         "textAlign": undefined,
       }
     }
   >
-    Press
+    <Text>
+      Tap it
+    </Text>
   </Text>
 </View>
 `;

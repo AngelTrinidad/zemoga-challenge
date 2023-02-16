@@ -1,6 +1,6 @@
 /**
  * Setup Axios instance with default values
- * @todo Move sensitive values(BASE_URL, API_VERSION) to env variables with {@link https://github.com/luggit/react-native-config}
+ * @todo Move sensitive values (BASE_URL) to env variables with {@link https://github.com/luggit/react-native-config}
  */
 
 import axios, {AxiosRequestConfig} from 'axios';
@@ -25,7 +25,7 @@ export const setupMockInterceptor = () => {
   return mockInterceptor;
 };
 
-export const mockApiOnGet = (interceptor: MockAdapter, url: string) =>
+export const mockOnGet = (interceptor: MockAdapter, url: string) =>
   interceptor.onGet(`${BASE_URL}/${url}`);
 
 export default axiosInstance;

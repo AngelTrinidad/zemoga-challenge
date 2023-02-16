@@ -10,6 +10,7 @@ interface UseGetPostDetail {
   isError: boolean;
   isSuccess: boolean;
   data?: PostWithMetadata;
+  isSuccessAuthor: boolean;
 }
 
 export const useGetPostDetail = (postId: number): UseGetPostDetail => {
@@ -18,6 +19,9 @@ export const useGetPostDetail = (postId: number): UseGetPostDetail => {
   const [author, setAuthor] = useState<User | undefined>();
   const [comments, setComments] = useState<Comment[]>([]);
   const [requestStatus, setRequestStatus] = useState<QueryState>(
+    QueryState.Idle,
+  );
+  const [requestStatusAuthor, setRequestStatusAuthor] = useState<QueryState>(
     QueryState.Idle,
   );
   const postWithMetadata = useMemo((): PostWithMetadata | undefined => {
@@ -50,9 +54,18 @@ export const useGetPostDetail = (postId: number): UseGetPostDetail => {
 
   const fetchComments = useCallback(async () => {
     try {
+      // Update request status to loading
+      setRequestStatusAuthor(QueryState.Loading);
+
       const data = await getCommentsByPost(postId);
       setComments(data);
+
+      // Update request status to loading
+      setRequestStatusAuthor(QueryState.Success);
     } catch (error) {
+      // Update request status to loading
+      setRequestStatusAuthor(QueryState.Error);
+
       console.log(error);
     }
   }, [postId]);
@@ -119,5 +132,6 @@ export const useGetPostDetail = (postId: number): UseGetPostDetail => {
     isLoading: requestStatus === QueryState.Loading,
     isError: requestStatus === QueryState.Error,
     isSuccess: requestStatus === QueryState.Success,
+    isSuccessAuthor: requestStatusAuthor === QueryState.Success,
   };
 };

@@ -1,18 +1,18 @@
 import React from 'react';
 import {Text} from 'react-native';
 
-import BasicContainer from '.';
+import DetailTemplate from '.';
 
 import {render} from '~helpers/testing';
 
-describe('<BasicContainer />', () => {
+describe('<DetailTemplate />', () => {
   let component: any;
 
   beforeEach(() => {
     component = render(
-      <BasicContainer>
+      <DetailTemplate title="Hello">
         <Text>Hello</Text>
-      </BasicContainer>,
+      </DetailTemplate>,
     );
   });
 
