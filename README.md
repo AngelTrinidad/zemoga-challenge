@@ -23,6 +23,7 @@ Inside the `src` folder, you will find the following:
     ├── helpers         # Util functions
     ├── hooks           # Custom hooks
     ├── interfaces      # Global interfaces
+    ├── mocks           # Mocks for testing
     ├── navigation      # Navigation setup
     ├── screens         # App screens
 
@@ -55,3 +56,13 @@ $ yarn android
 ```bash
 $ yarn iOS
 ```
+
+## How to run tests
+
+```bash
+$ yarn test
+```
+
+## Implementation notes
+
+The solution to the challenge was made with pure React and latest features. To manage the fetch of posts(and details) I implemented React Contexts, with custom hooks. Regarding offline content, there is an implementation of persisted content with [React Native Async Storage](https://github.com/react-native-async-storage/async-storage), the most popular package for this purpose. I tried to implement with [MMKV Storage](https://github.com/ammarahm-ed/react-native-mmkv-storage), which is the fastest package to persist data in RN projects, but there are incompatibilities with the new architecture of React Native, at least on Android.
